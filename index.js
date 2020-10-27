@@ -5,6 +5,8 @@ const snake_border = "dakblue";
 const food_col = "lightgreen";
 const food_border = "darkgreen";
 
+let paused = false;
+
 let snake = [
     { x: 200, y: 200 },
     { x: 190, y: 200 },
@@ -35,7 +37,13 @@ main();
 
 genFood();
 
-document.addEventListener("keydown", changeDirection);
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === 80) {
+        paused = !paused
+    } else {
+        changeDirection(event);
+    }
+});
 
 // main function being written and called to keep game running.
 function main() {
@@ -47,11 +55,17 @@ function main() {
     setTimeout(function onTick() {
         clearCanvas();
         drawFood();
-        moveSnake();
+        if (!paused) {
+            moveSnake();
+        }
         drawSnake();
 
         main();
     }, 100)
+}
+
+function gameHasPaused() {
+    return paused;
 }
 
 // draws the border of the canvas
