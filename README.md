@@ -2,7 +2,7 @@
 
 Ez Snake Game is just the snake game made completely in JavaScript. This will be used as reference code if you want to take a look at it and see how exactly I did it.
 
-The game is played with the arrow keys and begins on load of page. I may tinker a bit to see if I can make a start button to where the game wont start unless the button has been pushed and the player is ready.
+The game is played with the arrow keys and begins on load of page if the user presses the "P" key this will cause the game to pause and continue to play. I may tinker a bit to see if I can make a start button to where the game wont start unless the button has been pushed and the player is ready.
 
 ![EZ Snake Game](./img/SnakeGame.PNG)
 
