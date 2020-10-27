@@ -5,7 +5,7 @@ const snake_border = "dakblue";
 const food_col = "lightgreen";
 const food_border = "darkgreen";
 
-let paused = false;
+let paused = true;
 
 let snake = [
     { x: 200, y: 200 },
