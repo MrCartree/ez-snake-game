@@ -190,5 +190,3 @@ function moveSnake() {
         snake.pop();
     }
 }
-
-
